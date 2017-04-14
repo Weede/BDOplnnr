@@ -1,7 +1,33 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BDOplnnr.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MongoHost" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">HostValue</Value>
+    </Setting>
+    <Setting Name="MongoPort" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PortValue</Value>
+    </Setting>
+    <Setting Name="MongoUser" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">UserValue</Value>
+    </Setting>
+    <Setting Name="MongoPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PasswordValue</Value>
+    </Setting>
+    <Setting Name="MongoAuthDB" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">AuthDBValue</Value>
+    </Setting>
+    <Setting Name="MongoDB" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">DBValue</Value>
+    </Setting>
+    <Setting Name="MongoShard0" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Shard0</Value>
+    </Setting>
+    <Setting Name="MongoShard1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Shard1</Value>
+    </Setting>
+    <Setting Name="MongoShard2" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Shard2</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>
