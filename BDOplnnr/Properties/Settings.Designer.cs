@@ -31,40 +31,7 @@ namespace BDOplnnr.Properties {
                 return ((string)(this["MongoHost"]));
             }
         }
-
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Shard0")]
-        public string MongoShard0
-        {
-            get
-            {
-                return ((string)(this["MongoShard0"]));
-            }
-        }
-
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Shard1")]
-        public string MongoShard1
-        {
-            get
-            {
-                return ((string)(this["MongoShard1"]));
-            }
-        }
-
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Shard2")]
-        public string MongoShard2
-        {
-            get
-            {
-                return ((string)(this["MongoShard2"]));
-            }
-        }
-
+        
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("PortValue")]
@@ -103,12 +70,38 @@ namespace BDOplnnr.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("DBValue")]
+        [global::System.Configuration.DefaultSettingValueAttribute("DBValue1")]
         public string MongoDB {
             get {
                 return ((string)(this["MongoDB"]));
             }
         }
         
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Shard0")]
+        public string MongoShard0 {
+            get {
+                return ((string)(this["MongoShard0"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Shard1")]
+        public string MongoShard1 {
+            get {
+                return ((string)(this["MongoShard1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Shard2")]
+        public string MongoShard2 {
+            get {
+                return ((string)(this["MongoShard2"]));
+            }
+        }
     }
 }

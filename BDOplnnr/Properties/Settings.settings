@@ -18,7 +18,7 @@
       <Value Profile="(Default)">AuthDBValue</Value>
     </Setting>
     <Setting Name="MongoDB" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">DBValue</Value>
+      <Value Profile="(Default)">DBValue1</Value>
     </Setting>
     <Setting Name="MongoShard0" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Shard0</Value>

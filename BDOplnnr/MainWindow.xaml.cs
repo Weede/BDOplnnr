@@ -29,8 +29,9 @@ namespace BDOplnnr
         public MainWindow()
         {
             InitializeComponent();
-            DbConnection();
 
+            var set = new Properties.Settings();
+            lblOne.Content = set.MongoAuthDB;
         }
 
         private void DbConnection()
@@ -47,10 +48,7 @@ namespace BDOplnnr
                 ;
             }
 
-            var collection = db.GetCollection<Node>("bdo1");
-
-            var set = new Properties.Settings();
-            
+            //var collection = db.GetCollection<Node>("bdo1");
         }
     }
 }
