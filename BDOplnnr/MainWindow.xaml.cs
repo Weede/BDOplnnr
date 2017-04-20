@@ -12,43 +12,51 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MongoDB.Bson.Serialization.Attributes;
+//using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Driver;
+using MongoDB.Bson;
 
 namespace BDOplnnr
 {
-    public class Node
-    {
-        [BsonId]
-        public string territory { get; set; }
-        [BsonElement("city")]
-        public string city { get; set; }
-    }
-
+    /// <summary>
+    /// Interaktionslogik für MainWindow.xaml
+    /// </summary>
     public partial class MainWindow : Window
     {
+        private IMongoClient mongo;
+        private IMongoDatabase db;
+
         public MainWindow()
         {
             InitializeComponent();
-
-            var set = new Properties.Settings();
-            lblOne.Content = set.MongoAuthDB;
+            string connectionFile = Environment.GetEnvironmentVariable("USERPROFILE");
+            connectionFile = connectionFile + @"\documents\mongo_connection_string.txt";
+            string connectionString = System.IO.File.ReadAllText(connectionFile);
+            mongo = new MongoClient(connectionString);
+            var dbs = mongo.ListDatabases();
+            foreach (var db in dbs.ToEnumerable())
+            {
+                listBox0.Items.Add(db["name"]);
+            }
         }
 
-        private void DbConnection()
+        private void listBox0_DoubleClick(object sender, MouseButtonEventArgs e)
         {
-            var DbServer = new MongoDB.Driver.MongoClient();
-            var mongo = new MongoDB.Driver.MongoClient();
-            var db = mongo.GetDatabase("test1");
-            try
+            listBox1.Items.Remove(0);
+            ListBox lb = sender as ListBox;
+            db = mongo.GetDatabase(lb.SelectedItem.ToString());
+            var cols = db.ListCollections();
+            foreach (var col in cols.ToEnumerable())
             {
-                db.CreateCollection("bdo_test1");
+                listBox1.Items.Add(col["name"]);
             }
-            catch (MongoDB.Driver.MongoCommandException)
-            {
-                ;
-            }
-
-            //var collection = db.GetCollection<Node>("bdo1");
         }
+    }
+
+    class DatabaseDescription
+    {
+        public string name { get; set; }
+        public BsonDecimal128 sizeOnDisk { get; set; }
+        public BsonBoolean empty { get; set; }
     }
 }

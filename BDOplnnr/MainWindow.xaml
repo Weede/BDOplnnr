@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BDOplnnr"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="524">
     <Grid>
-        <Label x:Name="lblOne" Content="Label" HorizontalAlignment="Left" Margin="105,62,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="listBox0" HorizontalAlignment="Left" Height="300" Margin="10,10,0,0" VerticalAlignment="Top" Width="162" MouseDoubleClick="listBox0_DoubleClick"/>
+        <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="300" Margin="177,10,0,0" VerticalAlignment="Top" Width="162"/>
+        <ListBox x:Name="listBox2" HorizontalAlignment="Left" Height="300" Margin="344,10,0,0" VerticalAlignment="Top" Width="162"/>
     </Grid>
 </Window>
